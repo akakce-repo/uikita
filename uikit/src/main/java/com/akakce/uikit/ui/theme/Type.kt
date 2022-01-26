@@ -22,13 +22,13 @@ private val h8Scale = (26 / fontScale) * fontScale
 private val h9Scale = (28 / fontScale) * fontScale
 
 val RHAkakceFonts = FontFamily(
-    Font(R.font.LibreBaskerville_regular,FontWeight.Normal),
-    Font(R.font.LibreBaskerville_italic, FontWeight.W400,style= FontStyle.Italic)
+    Font(R.font.times_new_roman,FontWeight.Normal),
+    Font(R.font.times_new_roman_italic, FontWeight.W400,style= FontStyle.Italic)
 )
 
 val MHAkakceFonts = FontFamily(
-    Font(R.font.LibreBaskerville_regular,FontWeight.W700),
-    Font(R.font.LibreBaskerville_bold, FontWeight.W700),
+    Font(R.font.times_new_roman,FontWeight.W700),
+    Font(R.font.times_new_roman_bold, FontWeight.W700),
 )
 
 val RHAkakceTypography = Typography(

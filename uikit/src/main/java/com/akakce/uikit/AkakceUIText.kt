@@ -1,14 +1,10 @@
 package com.akakce.uikit
 
-import android.content.Context
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,8 +14,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.akakce.uikit.ui.theme.RHAkakceTypography
 
-class ToastMessage : ComponentActivity() {
-
+class AkakceUIText : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
