@@ -136,6 +136,7 @@ val BHAkakceTypography = Typography(
         color = AkakceBlack,
         fontFamily =  RHAkakceFonts,
         fontWeight = FontWeight.Bold,
+
         fontSize = getFontSize(28F).sp
     ),
     body2 = TextStyle(
