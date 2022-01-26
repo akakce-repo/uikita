@@ -39,6 +39,6 @@ class AkakceUIText : ComponentActivity() {
 
     @Composable
     fun setText(message: String, style: TextStyle) {
-        Text(text = "$message", style = style)
+        Text(text = "$message",style= style,color = Color.Cyan)
     }
 }
