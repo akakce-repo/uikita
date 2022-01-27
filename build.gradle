@@ -7,12 +7,8 @@ buildscript {
         google()
         mavenCentral()
         maven {
-            url "https://jitpack.io"
+            url "https://www.jitpack.io"
             credentials {username authToken }
-        }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
         }
     }
     dependencies {
