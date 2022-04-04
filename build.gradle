@@ -8,7 +8,7 @@ buildscript {
         mavenCentral()
         maven {
             url "https://www.jitpack.io"
-            credentials {username authToken }
+            credentials {username 'jp_2devet88crdeak03u7ap726qdt' }
         }
     }
     dependencies {
