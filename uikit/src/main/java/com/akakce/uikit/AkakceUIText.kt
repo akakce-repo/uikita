@@ -8,12 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.ExperimentalUnitApi
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 
 class AkakceUIText : ComponentActivity() {
 
+    @OptIn(ExperimentalUnitApi::class)
     @Composable
     fun setText(message: String, style: TextStyle) {
-        Text(text = "$message",style= style,modifier =Modifier.padding(4.dp))
+        Text(text = "$message", letterSpacing = TextUnit(-0.2f, TextUnitType.Sp),style= style,modifier =Modifier.padding(8.dp))
     }
 }

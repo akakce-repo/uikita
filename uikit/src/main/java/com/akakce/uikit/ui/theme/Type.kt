@@ -29,35 +29,29 @@ val RHAkakceFonts = FontFamily(
 )
 
 val RHAkakceTypography = Typography(
-    h1 = TextStyle(
+    body2 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(12F).sp
+        fontSize = getFontSize(11F).sp
     ),
-    h2 = TextStyle(
+    body1 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(13F).sp
+        fontSize = getFontSize(12.5F).sp
     ),
-    h3 = TextStyle(
+    subtitle2 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(14F).sp
+        fontSize = getFontSize(14.5F).sp
     ),
-    h4 = TextStyle(
+    subtitle1 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(15F).sp
-    ),
-    h5 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(16F).sp
+        fontSize = getFontSize(16.3F).sp
     ),
     h6 = TextStyle(
         color = AkakceBlack,
@@ -65,94 +59,38 @@ val RHAkakceTypography = Typography(
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(18F).sp
     ),
-    subtitle1 = TextStyle(
+    h5 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(24F).sp
+        fontSize = getFontSize(20F).sp
     ),
-    subtitle2 = TextStyle(
+    h4 = TextStyle(
+        color = AkakceBlack,
+        fontFamily = RHAkakceFonts,
+        fontWeight = FontWeight.Normal,
+        fontSize = getFontSize(21.5F).sp
+    ),
+    h3 = TextStyle(
+        color = AkakceBlack,
+        fontFamily = RHAkakceFonts,
+        fontWeight = FontWeight.Normal,
+        fontSize = getFontSize(23F).sp
+    ),
+    h2 = TextStyle(
+        color = AkakceBlack,
+        fontFamily = RHAkakceFonts,
+        fontWeight = FontWeight.Normal,
+        fontSize = getFontSize(24.5F).sp
+    ),
+    h1 = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(26F).sp
-    ),
-    body1 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(28F).sp
-    ),
-    body2 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Normal,
-        fontSize = getFontSize(11F).sp
     )
 )
 
-val BHAkakceTypography = Typography(
-    h1 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(12F).sp
-    ),
-    h2 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(13F).sp
-    ),
-    h3 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(14F).sp
-    ),
-    h4 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(15F).sp
-    ),
-    h5 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(16F).sp
-    ),
-    h6 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(18F).sp
-    ),
-    subtitle1 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(24F).sp
-    ),
-    subtitle2 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(26F).sp
-    ),
-    body1 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(28F).sp
-    ),
-    body2 = TextStyle(
-        color = AkakceBlack,
-        fontFamily = RHAkakceFonts,
-        fontWeight = FontWeight.Bold,
-        fontSize = getFontSize(11F).sp
-    )
-)
 
 fun getFontSize(size: Float): Float {
     return ((size / fontScale) * fontScale)
