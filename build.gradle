@@ -3,14 +3,17 @@ buildscript {
     ext {
         compose_version = '1.0.1'
     }
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url "https://www.jitpack.io"
-            credentials {username authToken }
+
+        repositories {
+            google()
+            mavenCentral()
+            maven {
+                url "https://www.jitpack.io"
+                credentials {username authToken }
+            }
         }
-    }
+
+
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32'
