@@ -33,7 +33,7 @@ android {
                 "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true"
         ]
     }
-    buildFeatures {
+    buildFeatures{
         compose true
     }
 

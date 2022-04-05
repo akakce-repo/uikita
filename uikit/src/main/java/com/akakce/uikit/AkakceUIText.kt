@@ -16,11 +16,6 @@ class AkakceUIText : ComponentActivity() {
     @OptIn(ExperimentalUnitApi::class)
     @Composable
     fun setText(message: String, style: TextStyle) {
-        Text(
-            text = "$message",
-            letterSpacing = TextUnit(-0.2f, TextUnitType.Sp),
-            style = style,
-            modifier = Modifier.padding(8.dp)
-        )
+        Text(text = "$message", letterSpacing = TextUnit(-0.2f, TextUnitType.Sp),style= style,modifier =Modifier.padding(8.dp))
     }
 }
