@@ -1,6 +1,7 @@
 package com.akakce.uikit.ui.theme
 
 import androidx.compose.material.Typography
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -28,62 +29,62 @@ val RHAkakceFonts = FontFamily(
     Font(R.font.roboto_black_italic, FontWeight.W900, style = FontStyle.Italic),
 )
 
-val RHAkakceTypography = Typography(
-    body2 = TextStyle(
+data class RHAkakceTypography (
+    val body2:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(11F).sp
     ),
-    body1 = TextStyle(
+   val body1:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(12.5F).sp
     ),
-    subtitle2 = TextStyle(
+   val subtitle2:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(14.5F).sp
     ),
-    subtitle1 = TextStyle(
+    val subtitle1:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(16.3F).sp
     ),
-    h6 = TextStyle(
+    val h6:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(18F).sp
     ),
-    h5 = TextStyle(
+    val h5:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(20F).sp
     ),
-    h4 = TextStyle(
+    val h4:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(21.5F).sp
     ),
-    h3 = TextStyle(
+    val h3 :TextStyle= TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(23F).sp
     ),
-    h2 = TextStyle(
+    val h2:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(24.5F).sp
     ),
-    h1 = TextStyle(
+    val h1:TextStyle = TextStyle(
         color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
@@ -95,3 +96,5 @@ val RHAkakceTypography = Typography(
 fun getFontSize(size: Float): Float {
     return ((size / fontScale) * fontScale)
 }
+
+internal val LocalTypography = staticCompositionLocalOf { RHAkakceTypography() }

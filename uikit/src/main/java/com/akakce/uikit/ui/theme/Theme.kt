@@ -1,29 +1,38 @@
 package com.akakce.uikit.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
-import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.remember
 
-private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
-)
+object AkakceTheme {
 
-private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-)
+    val colors: AppColors
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalColors.current
+
+    val typography: RHAkakceTypography
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalTypography.current
+
+}
 
 @Composable
-fun AkakceUITheme(darkTheme: Boolean = isSystemInDarkTheme(),content: @Composable() () -> Unit){
-    val colors = if(darkTheme){
-        DarkColorPalette
-    }else
-        LightColorPalette
-
-    MaterialTheme(colors = colors, typography = RHAkakceTypography, shapes = Shapes, content = content)
+fun AkakceTheme(
+    colors: AppColors = AkakceTheme.colors,
+    typography: RHAkakceTypography = AkakceTheme.typography,
+    content: @Composable () -> Unit
+) {
+    val darkTheme: Boolean = isSystemInDarkTheme()
+    val colors = if (darkTheme) darkColors() else lightColors()
+    val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
+    CompositionLocalProvider(
+        LocalColors provides rememberedColors,
+        LocalTypography provides typography
+    ) {
+        content()
+    }
 }
