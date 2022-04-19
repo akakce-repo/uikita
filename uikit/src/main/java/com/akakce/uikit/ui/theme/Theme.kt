@@ -26,9 +26,10 @@ fun AkakceTheme(
     typography: RHAkakceTypography = AkakceTheme.typography,
     content: @Composable () -> Unit
 ) {
-    val darkTheme: Boolean = isSystemInDarkTheme()
-    val colors = if (darkTheme) darkColors() else lightColors()
+
     val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
+    val darkTheme: Boolean = isSystemInDarkTheme()
+    if (darkTheme) darkColors() else lightColors()
     CompositionLocalProvider(
         LocalColors provides rememberedColors,
         LocalTypography provides typography
