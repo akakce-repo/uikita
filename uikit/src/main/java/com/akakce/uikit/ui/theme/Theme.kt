@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 
 object AkakceTheme {
 
-    val colors: AppColors
+    val colors: AkakceColors
         @Composable
         @ReadOnlyComposable
         get() = LocalColors.current
@@ -22,7 +22,7 @@ object AkakceTheme {
 
 @Composable
 fun AkakceTheme(
-    colors: AppColors = AkakceTheme.colors,
+    colors: AkakceColors = AkakceTheme.colors,
     typography: RHAkakceTypography = AkakceTheme.typography,
     content: @Composable () -> Unit
 ) {

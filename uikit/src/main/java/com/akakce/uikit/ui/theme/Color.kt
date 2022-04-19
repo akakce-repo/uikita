@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-class AkakaceColors(
+class AkakceColors(
     akakceBlueGray600: Color,
     akakceBlueGray500: Color,
     akakceBlueGray400: Color,
@@ -83,7 +83,7 @@ class AkakaceColors(
         akakceBaseRed: Color = this.akakceBaseRed,
         akakceTintRed: Color = this.akakceTintRed,
         isLight: Boolean = this.isLight
-    ): AkakaceColors = AkakaceColors(
+    ): AkakceColors = AkakceColors(
         akakceBlueGray600,
         akakceBlueGray500,
         akakceBlueGray400,
@@ -104,7 +104,7 @@ class AkakaceColors(
         isLight
     )
 
-    fun updateColorsFrom(other: AkakaceColors) {
+    fun updateColorsFrom(other: AkakceColors) {
         akakceBlueGray600 = other.akakceBlueGray600
         akakceBlueGray500 = other.akakceBlueGray500
         akakceBlueGray400 = other.akakceBlueGray400
@@ -146,7 +146,7 @@ fun lightColors(
     akakceTintGreen: Color = Color(0xFFE1F2ED),
     akakceBaseRed: Color = Color(0xFFF15249),
     akakceTintRed: Color = Color(0xFFFFEBED)
-): AkakaceColors = AkakaceColors(
+): AkakceColors = AkakceColors(
     akakceBlueGray600 = akakceBlueGray600,
     akakceBlueGray500 = akakceBlueGray500,
     akakceBlueGray400 = akakceBlueGray400,
@@ -185,7 +185,7 @@ fun darkColors(
     akakceTintGreen: Color = Color(0xFF22373D),
     akakceBaseRed: Color = Color(0xFFF19997),
     akakceTintRed: Color = Color(0xFF372D36)
-): AkakaceColors = AkakaceColors(
+): AkakceColors = AkakceColors(
     akakceBlueGray600 = akakceBlueGray600,
     akakceBlueGray500 = akakceBlueGray500,
     akakceBlueGray400 = akakceBlueGray400,
