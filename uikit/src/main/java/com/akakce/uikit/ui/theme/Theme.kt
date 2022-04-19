@@ -24,12 +24,13 @@ object AkakceTheme {
 fun AkakceTheme(
     colors: AkakceColors = AkakceTheme.colors,
     typography: RHAkakceTypography = AkakceTheme.typography,
+    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
 
-    val darkTheme: Boolean = isSystemInDarkTheme()
+    val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
     CompositionLocalProvider(
-        LocalColors provides if (darkTheme) darkColors() else lightColors(),
+        LocalColors provides rememberedColors,
         LocalTypography provides typography
     ) {
         content()

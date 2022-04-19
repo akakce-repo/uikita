@@ -60,7 +60,6 @@ class AkakceColors(
         private set
     var akakceTintRed by mutableStateOf(akakceTintRed)
         private set
-
     var isLight by mutableStateOf(isLight)
         internal set
 
