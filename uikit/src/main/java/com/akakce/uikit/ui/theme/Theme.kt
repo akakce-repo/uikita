@@ -27,11 +27,9 @@ fun AkakceTheme(
     content: @Composable () -> Unit
 ) {
 
-    val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
     val darkTheme: Boolean = isSystemInDarkTheme()
-    if (darkTheme) darkColors() else lightColors()
     CompositionLocalProvider(
-        LocalColors provides rememberedColors,
+        LocalColors provides if (darkTheme) darkColors() else lightColors(),
         LocalTypography provides typography
     ) {
         content()
