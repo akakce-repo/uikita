@@ -1,6 +1,5 @@
 package com.akakce.uikit.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
@@ -24,10 +23,8 @@ object AkakceTheme {
 fun AkakceTheme(
     colors: AkakceColors = AkakceTheme.colors,
     typography: RHAkakceTypography = AkakceTheme.typography,
-    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-
     val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
     CompositionLocalProvider(
         LocalColors provides rememberedColors,
