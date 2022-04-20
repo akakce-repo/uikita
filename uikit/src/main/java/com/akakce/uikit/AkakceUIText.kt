@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
+import com.akakce.uikit.ui.theme.AkakceTheme
 
 class AkakceUIText : ComponentActivity() {
     @OptIn(ExperimentalUnitApi::class)
@@ -19,7 +20,8 @@ class AkakceUIText : ComponentActivity() {
             text = "$message",
             letterSpacing = TextUnit(-0.2f, TextUnitType.Sp),
             style = style,
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(8.dp),
+            color = AkakceTheme.colors.akakceBlueGray600
         )
     }
 }

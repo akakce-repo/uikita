@@ -31,61 +31,53 @@ val RHAkakceFonts = FontFamily(
 
 data class RHAkakceTypography (
     val body2:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(11F).sp
     ),
    val body1:TextStyle = TextStyle(
-        color = AkakceBlack,
+
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(12.5F).sp
     ),
    val subtitle2:TextStyle = TextStyle(
-        color = AkakceBlack,
+
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(14.5F).sp
     ),
     val subtitle1:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(16.3F).sp
     ),
     val h6:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(18F).sp
     ),
     val h5:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(20F).sp
     ),
     val h4:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(21.5F).sp
     ),
     val h3 :TextStyle= TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(23F).sp
     ),
     val h2:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(24.5F).sp
     ),
     val h1:TextStyle = TextStyle(
-        color = AkakceBlack,
         fontFamily = RHAkakceFonts,
         fontWeight = FontWeight.Normal,
         fontSize = getFontSize(26F).sp

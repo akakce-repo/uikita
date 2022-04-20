@@ -125,8 +125,6 @@ class AkakceColors(
     }
 }
 
-val AkakceBlack = Color(0xFF383838)
-
 fun lightColors(
     akakceBlueGray600: Color = Color(0xFF2F3640),
     akakceBlueGray500: Color = Color(0xFF627285),
