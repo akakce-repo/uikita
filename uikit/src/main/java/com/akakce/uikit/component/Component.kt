@@ -30,7 +30,7 @@ class AkakceUIComponent {
         Card(
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier
-                .size(185.dp, 280.dp)
+                .size(200.dp, 280.dp)
                 .padding(all = 8.dp)
                 .fillMaxWidth()
         ) {

@@ -39,7 +39,7 @@ class AkakceUIDiscountCell {
                 Image(
                     painter = painterResource(id = R.drawable.ic_downarrow),
                     contentDescription = null,
-                    modifier = Modifier.padding(0.dp, 5.dp)
+                    modifier = Modifier.padding(0.dp, 4.dp)
                 )
             }
 

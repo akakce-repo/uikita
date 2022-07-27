@@ -20,7 +20,7 @@ class AkakceUIProductImage {
     fun ProductImage(imageUrl:String) {
         Image(
             painter = rememberImagePainter(imageUrl), contentDescription = null,
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Inside,
             modifier = Modifier
                 .padding(9.dp, 15.dp, 9.dp, 0.dp)
                 .size(180.dp, 165.dp)

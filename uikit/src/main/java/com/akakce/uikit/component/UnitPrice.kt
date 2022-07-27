@@ -19,7 +19,7 @@ class AkakceUIUnitPrice{
     fun UnitPrice(unitPrice: String) {
         Text(
             text = unitPrice,
-            modifier = Modifier.padding(9.dp, 3.dp),
+            modifier = Modifier.padding(9.dp, 0.dp),
             color = AkakceTheme.colors.akakceBasePurple,
             fontSize = 10.sp
         )
