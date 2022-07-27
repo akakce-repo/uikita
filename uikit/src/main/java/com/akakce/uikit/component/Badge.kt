@@ -18,25 +18,28 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-@Composable
-fun Badge() {
-    val badgeText  = ""
-    val button = 0
-    Box {
-        Image(
-            painter = painterResource(id = button),
-            contentDescription = null,
-            modifier = Modifier
-                .size(104.dp, 38.dp)
-                .padding(0.dp, 9.dp),
-        )
-        Text(
-            text = badgeText,
-            modifier = Modifier.padding(9.dp, 12.dp),
-            color = AkakceTheme.colors.akakceBaseBlue,
-            fontSize = 9.sp,
-            fontWeight = FontWeight.Bold
-        )
+class AkakceUIBadge{
+    var badgeText = ""
+    var button = 0
 
+    @Composable
+    fun Badge() {
+        Box {
+            Image(
+                painter = painterResource(id = button),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(104.dp, 38.dp)
+                    .padding(0.dp, 9.dp),
+            )
+            Text(
+                text = badgeText,
+                modifier = Modifier.padding(9.dp, 12.dp),
+                color = AkakceTheme.colors.akakceBaseBlue,
+                fontSize = 9.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+        }
     }
 }

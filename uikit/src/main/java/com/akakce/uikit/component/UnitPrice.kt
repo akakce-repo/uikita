@@ -13,13 +13,16 @@ import androidx.compose.ui.unit.sp
  * @Date: 27.07.2022
  */
 
-@Composable
-fun UnitPrice() {
-    val unitPrice = ""
-    Text(
-        text = unitPrice,
-        modifier = Modifier.padding(9.dp, 3.dp),
-        color = Color.Blue,
-        fontSize = 10.sp
-    )
+class AkakceUIUnitPrice{
+    var unitPrice = ""
+
+    @Composable
+    fun UnitPrice() {
+        Text(
+            text = unitPrice,
+            modifier = Modifier.padding(9.dp, 3.dp),
+            color = Color.Blue,
+            fontSize = 10.sp
+        )
+    }
 }

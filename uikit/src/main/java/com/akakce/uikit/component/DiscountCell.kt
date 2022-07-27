@@ -19,39 +19,40 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-@Composable
-fun DiscountCell() {
-    val cheaperText: String = ""
-    val percent: String = ""
-    val isDown: Boolean = false
-    val downArrow = 0
+class AkakceUIDiscountCell{
+    var cheaperText: String = ""
+    var percent: String = ""
+    var isDown: Boolean = false
+    var downArrow = 0
 
+    @Composable
+    fun DiscountCell() {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Text(
+                text = cheaperText,
+                style = MaterialTheme.typography.subtitle2,
+                fontSize = 9.sp,
+                modifier = Modifier.padding(9.dp, 1.dp),
+                fontWeight = FontWeight.Bold
+            )
+            if (isDown) {
+                Image(
+                    painter = painterResource(id = downArrow),
+                    contentDescription = null,
+                    modifier = Modifier.padding(0.dp, 5.dp)
+                )
+            }
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-    ) {
-        Text(
-            text = cheaperText,
-            style = MaterialTheme.typography.subtitle2,
-            fontSize = 9.sp,
-            modifier = Modifier.padding(9.dp, 1.dp),
-            fontWeight = FontWeight.Bold
-        )
-        if (isDown) {
-            Image(
-                painter = painterResource(id = downArrow),
-                contentDescription = null,
-                modifier = Modifier.padding(0.dp, 5.dp)
+            Text(
+                text = percent,
+                style = MaterialTheme.typography.subtitle2,
+                fontSize = 10.sp,
+                color = AkakceTheme.colors.akakceBaseGreen,
+                modifier = Modifier.padding(1.dp, 0.dp)
             )
         }
-
-        Text(
-            text = percent,
-            style = MaterialTheme.typography.subtitle2,
-            fontSize = 10.sp,
-            color = AkakceTheme.colors.akakceBaseGreen,
-            modifier = Modifier.padding(1.dp, 0.dp)
-        )
     }
 }

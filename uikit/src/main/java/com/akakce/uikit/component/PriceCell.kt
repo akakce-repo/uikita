@@ -16,28 +16,31 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-@OptIn(ExperimentalUnitApi::class)
-@Composable
-fun PriceCell() {
-    val price = ""
-    val countPrice = ""
-    Row(
-        modifier = Modifier
-            .fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(
-            text = price,
-            style = MaterialTheme.typography.subtitle2,
-            modifier = Modifier.padding(9.dp, 0.dp, 7.dp, 0.dp)
-        )
-        Text(
-            text = countPrice,
-            style = MaterialTheme.typography.subtitle1,
-            fontSize = 8.sp,
-            color = AkakceTheme.colors.akakceBaseBlue,
-            modifier = Modifier.padding(12.dp, 4.dp),
-            letterSpacing = TextUnit(0.6f, TextUnitType.Sp)
-        )
+class AkakceUIPriceCell{
+    var price = ""
+    var countPrice = ""
+
+    @OptIn(ExperimentalUnitApi::class)
+    @Composable
+    fun PriceCell() {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = price,
+                style = MaterialTheme.typography.subtitle2,
+                modifier = Modifier.padding(9.dp, 0.dp, 7.dp, 0.dp)
+            )
+            Text(
+                text = countPrice,
+                style = MaterialTheme.typography.subtitle1,
+                fontSize = 8.sp,
+                color = AkakceTheme.colors.akakceBaseBlue,
+                modifier = Modifier.padding(12.dp, 4.dp),
+                letterSpacing = TextUnit(0.6f, TextUnitType.Sp)
+            )
+        }
     }
 }

@@ -13,35 +13,37 @@ import androidx.compose.ui.unit.dp
  * @Date: 25.07.2022
  */
 
-@Preview
-@Composable
-fun Component() {
-    Card(
-        shape = RoundedCornerShape(8.dp),
-        modifier = Modifier
-            .size(185.dp, 280.dp)
-            .padding(all = 8.dp)
-            .fillMaxWidth()
-    ) {
-        Box {
-            Column {
-                ProductImage()
-                ProductName()
-                DiscountCell()
-                PriceCell()
-                UnitPrice()
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Badge()
-                Bell()
 
+class AkakceUIComponent{
+    @Composable
+    fun Component() {
+        Card(
+            shape = RoundedCornerShape(8.dp),
+            modifier = Modifier
+                .size(185.dp, 280.dp)
+                .padding(all = 8.dp)
+                .fillMaxWidth()
+        ) {
+            Box {
+                Column {
+                    AkakceUIProductImage().ProductImage()
+                    AkakceUIProductName().ProductName()
+                    AkakceUIDiscountCell().DiscountCell()
+                    AkakceUIPriceCell().PriceCell()
+                    AkakceUIUnitPrice().UnitPrice()
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    AkakceUIBadge().Badge()
+                    AkakceUIBell().Bell()
+
+                }
             }
+
         }
 
     }
-
 }

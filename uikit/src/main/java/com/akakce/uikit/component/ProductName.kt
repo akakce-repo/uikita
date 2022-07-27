@@ -13,13 +13,16 @@ import androidx.compose.ui.unit.sp
  * @Date: 27.07.2022
  */
 
-@Composable
-fun ProductName() {
-    val productName = ""
-    Text(
-        text = productName,
-        modifier = Modifier.padding(9.dp,0.dp),
-        color = Color.Gray,
-        fontSize = 13.sp
-    )
+class AkakceUIProductName{
+    var productName = ""
+
+    @Composable
+    fun ProductName() {
+        Text(
+            text = productName,
+            modifier = Modifier.padding(9.dp, 0.dp),
+            color = Color.Gray,
+            fontSize = 13.sp
+        )
+    }
 }
