@@ -21,7 +21,8 @@ class AkakceUIProductName{
             text = productName,
             modifier = Modifier.padding(9.dp, 0.dp),
             color = AkakceTheme.colors.akakceBlueGray500,
-            fontSize = 13.sp
+            fontSize = 13.sp,
+            maxLines = 2
         )
     }
 }
