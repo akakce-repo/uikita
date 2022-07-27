@@ -32,7 +32,7 @@ class AkakceUIBadge {
             )
             Text(
                 text = badgeText,
-                modifier = Modifier.padding(9.dp, 12.dp),
+                modifier = Modifier.padding(6.dp, 12.dp),
                 color = AkakceTheme.colors.akakceBasePurple,
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Bold,
