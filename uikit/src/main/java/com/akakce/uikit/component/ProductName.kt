@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.akakce.uikit.ui.theme.AkakceTheme
 
 /**
  * @Author: Selim Simsek
@@ -19,7 +20,7 @@ class AkakceUIProductName{
         Text(
             text = productName,
             modifier = Modifier.padding(9.dp, 0.dp),
-            color = Color.Gray,
+            color = AkakceTheme.colors.akakceBlueGray500,
             fontSize = 13.sp
         )
     }

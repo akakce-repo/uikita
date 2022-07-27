@@ -24,7 +24,8 @@ class AkakceUIComponent {
         price: String,
         countPrice: String,
         unitPrice: String,
-        badgeText: String
+        badgeText: String,
+        onClick: Boolean
     ) {
         Card(
             shape = RoundedCornerShape(8.dp),
@@ -47,7 +48,7 @@ class AkakceUIComponent {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     AkakceUIBadge().Badge(badgeText)
-                    AkakceUIBell().Bell()
+                    AkakceUIBell().Bell(onClick)
 
                 }
             }

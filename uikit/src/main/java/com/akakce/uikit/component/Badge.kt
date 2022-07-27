@@ -9,8 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.*
 import com.akakce.uikit.R
 import com.akakce.uikit.ui.theme.AkakceTheme
 
@@ -20,11 +19,12 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  */
 
 class AkakceUIBadge {
+    @OptIn(ExperimentalUnitApi::class)
     @Composable
     fun Badge(badgeText: String) {
         Box {
             Image(
-                painter = painterResource(id = R.drawable.ic_button),
+                painter = painterResource(id = R.drawable.ic_badge),
                 contentDescription = null,
                 modifier = Modifier
                     .size(104.dp, 38.dp)
@@ -33,9 +33,10 @@ class AkakceUIBadge {
             Text(
                 text = badgeText,
                 modifier = Modifier.padding(9.dp, 12.dp),
-                color = AkakceTheme.colors.akakceBaseBlue,
+                color = AkakceTheme.colors.akakceBasePurple,
                 fontSize = 9.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                letterSpacing = TextUnit(0.3f, TextUnitType.Sp)
             )
 
         }

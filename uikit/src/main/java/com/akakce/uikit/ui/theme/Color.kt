@@ -24,6 +24,8 @@ class AkakceColors(
     akakceTintGreen: Color,
     akakceBaseRed: Color,
     akakceTintRed: Color,
+    akakceBasePurple: Color,
+    akakceTintPurple: Color,
     isLight: Boolean
 ) {
     var akakceBlueGray600 by mutableStateOf(akakceBlueGray600)
@@ -60,6 +62,10 @@ class AkakceColors(
         private set
     var akakceTintRed by mutableStateOf(akakceTintRed)
         private set
+    var akakceBasePurple by mutableStateOf(akakceBasePurple)
+        private set
+    var akakceTintPurple by mutableStateOf(akakceTintPurple)
+        private set
     var isLight by mutableStateOf(isLight)
         internal set
 
@@ -81,6 +87,8 @@ class AkakceColors(
         akakceTintGreen: Color = this.akakceTintGreen,
         akakceBaseRed: Color = this.akakceBaseRed,
         akakceTintRed: Color = this.akakceTintRed,
+        akakceBasePurple: Color = this.akakceBasePurple,
+        akakceTintPurple: Color = this.akakceTintPurple,
         isLight: Boolean = this.isLight
     ): AkakceColors = AkakceColors(
         akakceBlueGray600,
@@ -100,6 +108,8 @@ class AkakceColors(
         akakceTintGreen,
         akakceBaseRed,
         akakceTintRed,
+        akakceBasePurple,
+        akakceTintPurple,
         isLight
     )
 
@@ -121,6 +131,8 @@ class AkakceColors(
         akakceTintGreen = other.akakceTintGreen
         akakceBaseRed = other.akakceBaseRed
         akakceTintRed = other.akakceTintRed
+        akakceBasePurple = other.akakceBasePurple
+        akakceTintPurple = other.akakceTintPurple
 
     }
 }
@@ -142,7 +154,9 @@ fun lightColors(
     akakceBaseGreen: Color = Color(0xFF3CA886),
     akakceTintGreen: Color = Color(0xFFE1F2ED),
     akakceBaseRed: Color = Color(0xFFF15249),
-    akakceTintRed: Color = Color(0xFFFFEBED)
+    akakceTintRed: Color = Color(0xFFFFEBED),
+    akakceBasePurple: Color = Color(0xFF754BED),
+    akakceTintPurple: Color = Color(0xFFF0EBFF)
 ): AkakceColors = AkakceColors(
     akakceBlueGray600 = akakceBlueGray600,
     akakceBlueGray500 = akakceBlueGray500,
@@ -161,6 +175,8 @@ fun lightColors(
     akakceTintGreen = akakceTintGreen,
     akakceBaseRed = akakceBaseRed,
     akakceTintRed = akakceTintRed,
+    akakceBasePurple = akakceBasePurple,
+    akakceTintPurple = akakceTintPurple,
     isLight = true
 )
 
@@ -181,7 +197,9 @@ fun darkColors(
     akakceBaseGreen: Color = Color(0xFF87CCB6),
     akakceTintGreen: Color = Color(0xFF22373D),
     akakceBaseRed: Color = Color(0xFFF19997),
-    akakceTintRed: Color = Color(0xFF372D36)
+    akakceTintRed: Color = Color(0xFF372D36),
+    akakceBasePurple: Color = Color(0xFFAC93F4),
+    akakceTintPurple: Color = Color(0xFF262A47)
 ): AkakceColors = AkakceColors(
     akakceBlueGray600 = akakceBlueGray600,
     akakceBlueGray500 = akakceBlueGray500,
@@ -200,6 +218,8 @@ fun darkColors(
     akakceTintGreen = akakceTintGreen,
     akakceBaseRed = akakceBaseRed,
     akakceTintRed = akakceTintRed,
+    akakceBasePurple = akakceBasePurple,
+    akakceTintPurple =akakceTintPurple,
     isLight = false
 )
 

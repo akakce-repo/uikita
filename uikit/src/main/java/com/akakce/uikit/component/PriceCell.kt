@@ -28,7 +28,8 @@ class AkakceUIPriceCell {
             Text(
                 text = price,
                 style = MaterialTheme.typography.subtitle2,
-                modifier = Modifier.padding(9.dp, 0.dp, 7.dp, 0.dp)
+                modifier = Modifier.padding(9.dp, 0.dp, 7.dp, 0.dp),
+                color = AkakceTheme.colors.akakceBlueGray600
             )
             Text(
                 text = countPrice,

@@ -32,7 +32,8 @@ class AkakceUIDiscountCell {
                 style = MaterialTheme.typography.subtitle2,
                 fontSize = 9.sp,
                 modifier = Modifier.padding(9.dp, 1.dp),
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                color = AkakceTheme.colors.akakceBlueGray600
             )
             if (isDown) {
                 Image(

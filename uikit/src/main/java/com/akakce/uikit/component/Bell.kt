@@ -17,7 +17,7 @@ import com.akakce.uikit.R
 
 class AkakceUIBell {
     @Composable
-    fun Bell() {
+    fun Bell(onClick: Boolean) {
         Box {
             Image(
                 painter = painterResource(id = R.drawable.ic_ellipse),
@@ -27,7 +27,13 @@ class AkakceUIBell {
                     .padding(5.dp),  //avoid the oval shape ,
             )
             Image(
-                painter = painterResource(id = R.drawable.ic_bell),
+                painter = painterResource(
+                    id = if (onClick) {
+                        R.drawable.ic_follow
+                    }else{
+                        R.drawable.ic_unfollow
+                    }
+                ),
                 contentDescription = "content description",
                 modifier = Modifier
                     .padding(12.dp, 12.dp)
