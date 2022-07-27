@@ -15,22 +15,19 @@ import com.akakce.uikit.R
  * @Date: 27.07.2022
  */
 
-class AkakceUIBell{
-    var ellipse = 0
-    var bell = 0
-
+class AkakceUIBell {
     @Composable
     fun Bell() {
         Box {
             Image(
-                painter = painterResource(id = ellipse),
+                painter = painterResource(id = R.drawable.ic_ellipse),
                 contentDescription = null,
                 modifier = Modifier
                     .size(38.dp)
                     .padding(5.dp),  //avoid the oval shape ,
             )
             Image(
-                painter = painterResource(id = bell),
+                painter = painterResource(id = R.drawable.ic_bell),
                 contentDescription = "content description",
                 modifier = Modifier
                     .padding(12.dp, 12.dp)

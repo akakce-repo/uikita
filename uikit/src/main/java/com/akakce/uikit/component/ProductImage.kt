@@ -16,10 +16,8 @@ import coil.compose.rememberImagePainter
  */
 
 class AkakceUIProductImage {
-    var imageUrl = ""
-
     @Composable
-    fun ProductImage() {
+    fun ProductImage(imageUrl:String) {
         Image(
             painter = rememberImagePainter(imageUrl), contentDescription = null,
             contentScale = ContentScale.FillWidth,

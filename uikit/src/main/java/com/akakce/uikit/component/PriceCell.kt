@@ -16,13 +16,10 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-class AkakceUIPriceCell{
-    var price = ""
-    var countPrice = ""
-
+class AkakceUIPriceCell {
     @OptIn(ExperimentalUnitApi::class)
     @Composable
-    fun PriceCell() {
+    fun PriceCell(price: String, countPrice: String) {
         Row(
             modifier = Modifier
                 .fillMaxWidth(),

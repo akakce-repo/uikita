@@ -12,6 +12,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.akakce.uikit.R
 import com.akakce.uikit.ui.theme.AkakceTheme
 
 /**
@@ -19,14 +20,9 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-class AkakceUIDiscountCell{
-    var cheaperText: String = ""
-    var percent: String = ""
-    var isDown: Boolean = false
-    var downArrow = 0
-
+class AkakceUIDiscountCell {
     @Composable
-    fun DiscountCell() {
+    fun DiscountCell(cheaperText: String, percent: String, isDown: Boolean) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -40,7 +36,7 @@ class AkakceUIDiscountCell{
             )
             if (isDown) {
                 Image(
-                    painter = painterResource(id = downArrow),
+                    painter = painterResource(id = R.drawable.ic_downarrow),
                     contentDescription = null,
                     modifier = Modifier.padding(0.dp, 5.dp)
                 )

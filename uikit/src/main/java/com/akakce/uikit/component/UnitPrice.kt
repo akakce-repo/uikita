@@ -14,10 +14,8 @@ import androidx.compose.ui.unit.sp
  */
 
 class AkakceUIUnitPrice{
-    var unitPrice = ""
-
     @Composable
-    fun UnitPrice() {
+    fun UnitPrice(unitPrice: String) {
         Text(
             text = unitPrice,
             modifier = Modifier.padding(9.dp, 3.dp),

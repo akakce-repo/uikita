@@ -11,6 +11,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.akakce.uikit.R
 import com.akakce.uikit.ui.theme.AkakceTheme
 
 /**
@@ -18,15 +19,12 @@ import com.akakce.uikit.ui.theme.AkakceTheme
  * @Date: 27.07.2022
  */
 
-class AkakceUIBadge{
-    var badgeText = ""
-    var button = 0
-
+class AkakceUIBadge {
     @Composable
-    fun Badge() {
+    fun Badge(badgeText: String) {
         Box {
             Image(
-                painter = painterResource(id = button),
+                painter = painterResource(id = R.drawable.ic_button),
                 contentDescription = null,
                 modifier = Modifier
                     .size(104.dp, 38.dp)

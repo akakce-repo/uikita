@@ -14,10 +14,8 @@ import androidx.compose.ui.unit.sp
  */
 
 class AkakceUIProductName{
-    var productName = ""
-
     @Composable
-    fun ProductName() {
+    fun ProductName(productName:String) {
         Text(
             text = productName,
             modifier = Modifier.padding(9.dp, 0.dp),

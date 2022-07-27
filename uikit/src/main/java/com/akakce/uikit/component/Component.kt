@@ -5,7 +5,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 /**
@@ -14,9 +13,19 @@ import androidx.compose.ui.unit.dp
  */
 
 
-class AkakceUIComponent{
+class AkakceUIComponent {
     @Composable
-    fun Component() {
+    fun Component(
+        imageUrl: String,
+        productName: String,
+        cheaperText: String,
+        percent: String,
+        isDown: Boolean,
+        price: String,
+        countPrice: String,
+        unitPrice: String,
+        badgeText: String
+    ) {
         Card(
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier
@@ -26,18 +35,18 @@ class AkakceUIComponent{
         ) {
             Box {
                 Column {
-                    AkakceUIProductImage().ProductImage()
-                    AkakceUIProductName().ProductName()
-                    AkakceUIDiscountCell().DiscountCell()
-                    AkakceUIPriceCell().PriceCell()
-                    AkakceUIUnitPrice().UnitPrice()
+                    AkakceUIProductImage().ProductImage(imageUrl)
+                    AkakceUIProductName().ProductName(productName)
+                    AkakceUIDiscountCell().DiscountCell(cheaperText, percent, isDown)
+                    AkakceUIPriceCell().PriceCell(price, countPrice)
+                    AkakceUIUnitPrice().UnitPrice(unitPrice)
                 }
                 Row(
                     modifier = Modifier
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    AkakceUIBadge().Badge()
+                    AkakceUIBadge().Badge(badgeText)
                     AkakceUIBell().Bell()
 
                 }
