@@ -38,9 +38,6 @@ class AkakceUIComponent {
                 .size(205.dp, 290.dp)
                 .padding(all = 8.dp)
                 .fillMaxWidth()
-                .clickable {
-
-                },
         ) {
             Box {
                 Column {

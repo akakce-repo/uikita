@@ -1,6 +1,7 @@
 package com.akakce.uikit.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -23,6 +24,7 @@ class AkakceUIBell {
                 painter = painterResource(id = R.drawable.ic_ellipse),
                 contentDescription = null,
                 modifier = Modifier
+                    .clickable {  }
                     .size(38.dp)
                     .padding(5.dp),  //avoid the oval shape ,
             )
