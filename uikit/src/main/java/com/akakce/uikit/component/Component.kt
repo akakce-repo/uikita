@@ -1,5 +1,6 @@
 package com.akakce.uikit.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -34,8 +35,8 @@ class AkakceUIComponent {
             modifier = Modifier
                 .size(205.dp, 290.dp)
                 .padding(all = 8.dp)
-                .fillMaxWidth(),
-            onClick = {}
+                .fillMaxWidth()
+                .clickable {}
         ) {
             Box {
                 Column {
