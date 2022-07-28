@@ -24,7 +24,6 @@ class AkakceUIBell {
                 painter = painterResource(id = R.drawable.ic_ellipse),
                 contentDescription = null,
                 modifier = Modifier
-                    .clickable {  }
                     .size(38.dp)
                     .padding(5.dp),  //avoid the oval shape ,
             )
