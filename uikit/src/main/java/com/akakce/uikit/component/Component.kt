@@ -1,12 +1,14 @@
 package com.akakce.uikit.component
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.unit.dp
 
 /**
@@ -36,6 +38,9 @@ class AkakceUIComponent {
                 .size(205.dp, 290.dp)
                 .padding(all = 8.dp)
                 .fillMaxWidth()
+                .clickable {
+
+                },
         ) {
             Box {
                 Column {
