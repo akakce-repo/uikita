@@ -34,7 +34,7 @@ class AkakceUIPriceCell {
             Text(
                 text = countPrice,
                 style = MaterialTheme.typography.subtitle1,
-                fontSize = 8.sp,
+                fontSize = 10.sp,
                 color = AkakceTheme.colors.akakceBaseBlue,
                 modifier = Modifier.padding(12.dp, 4.dp),
                 letterSpacing = TextUnit(0.6f, TextUnitType.Sp)

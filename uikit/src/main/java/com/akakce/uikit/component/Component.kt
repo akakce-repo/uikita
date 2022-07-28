@@ -3,6 +3,7 @@ package com.akakce.uikit.component
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -14,6 +15,7 @@ import androidx.compose.ui.unit.dp
 
 
 class AkakceUIComponent {
+    @OptIn(ExperimentalMaterialApi::class)
     @Composable
     fun Component(
         imageUrl: String,
@@ -30,9 +32,10 @@ class AkakceUIComponent {
         Card(
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier
-                .size(200.dp, 280.dp)
+                .size(205.dp, 290.dp)
                 .padding(all = 8.dp)
-                .fillMaxWidth()
+                .fillMaxWidth(),
+            onClick = {}
         ) {
             Box {
                 Column {
