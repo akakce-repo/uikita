@@ -20,14 +20,12 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
-    var onClick : Boolean = false
     @Composable
     fun Bell(onClick: Boolean) {
 
         val clickable = remember {
             mutableStateOf(onClick)
         }
-        clickable.value = this.onClick
 
         Box {
             Box(modifier = Modifier.padding(0.dp, 2.dp)) {
