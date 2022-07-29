@@ -31,7 +31,6 @@ class AkakceUIComponent {
         Box(
             modifier = Modifier
                 .size(205.dp, 290.dp)
-                .padding(all = 8.dp)
                 .clip(RoundedCornerShape(8.dp))
                 .fillMaxWidth()
         ) {
