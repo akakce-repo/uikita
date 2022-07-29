@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.OutlinedButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -18,11 +20,15 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
-
-    var clickable: Boolean = false
-
+    var onClick : Boolean = false
     @Composable
     fun Bell(onClick: Boolean) {
+
+        val clickable = remember {
+            mutableStateOf(onClick)
+        }
+        clickable.value = this.onClick
+
         Box {
             Box(modifier = Modifier.padding(0.dp, 2.dp)) {
                 OutlinedButton(
@@ -35,11 +41,11 @@ class AkakceUIBell {
                     modifier = Modifier
                         .size(41.dp)
                         .padding(4.dp),
-                    onClick = { clickable = !onClick }
+                    onClick = { clickable.value = !clickable.value }
                 ) {}
                 Image(
                     painter = painterResource(
-                        id = if (clickable) {
+                        id = if (clickable.value) {
                             R.drawable.ic_follow
                         } else {
                             R.drawable.ic_unfollow
