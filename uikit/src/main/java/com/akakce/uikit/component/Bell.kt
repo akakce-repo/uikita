@@ -20,6 +20,8 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
+    var isClick = false
+
     @Composable
     fun Bell(onClick: Boolean) {
 
@@ -54,7 +56,7 @@ class AkakceUIBell {
                         .padding(11.dp, 11.dp)
                         .size(20.dp)
                 )
-
+                isClick = clickable.value
 
             }
 
