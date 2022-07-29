@@ -4,6 +4,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,20 +25,24 @@ class AkakceUIBadge {
     @Composable
     fun Badge(badgeText: String) {
         Box {
-            Image(
-                painter = painterResource(id = R.drawable.ic_badge),
-                contentDescription = null,
+            OutlinedButton(
+                shape = RoundedCornerShape(
+                    0.dp,
+                    25.dp,
+                    25.dp,
+                    0.dp),
                 modifier = Modifier
-                    .size(104.dp, 38.dp)
-                    .padding(0.dp, 9.dp),
-            )
+                    .padding(0.dp, 8.dp)
+                    .size(120.dp, 25.dp),
+                onClick = {}
+            ){}
             Text(
-                text = badgeText,
-                modifier = Modifier.padding(6.dp, 12.dp),
+                text = "BROŞÜRDE EN UCUZ",
+                modifier = Modifier.padding(6.dp, 15.dp),
                 color = AkakceTheme.colors.akakceBasePurple,
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Bold,
-                letterSpacing = TextUnit(0.3f, TextUnitType.Sp)
+                letterSpacing = TextUnit(0.4f, TextUnitType.Sp)
             )
 
         }
