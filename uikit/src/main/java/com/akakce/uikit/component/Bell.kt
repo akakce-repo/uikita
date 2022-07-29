@@ -18,6 +18,7 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
+
     var clickable: Boolean = false
 
     @Composable
@@ -34,7 +35,7 @@ class AkakceUIBell {
                     modifier = Modifier
                         .size(41.dp)
                         .padding(4.dp),
-                    onClick = { clickable = onClick }
+                    onClick = { clickable = !onClick }
                 ) {}
                 Image(
                     painter = painterResource(
