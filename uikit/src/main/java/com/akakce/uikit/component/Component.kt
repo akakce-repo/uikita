@@ -27,7 +27,6 @@ import com.akakce.uikit.ui.theme.AkakceTheme
 
 
 class AkakceUIComponent {
-    @OptIn(ExperimentalMaterialApi::class, ExperimentalUnitApi::class)
     @Composable
     fun Component(
         imageUrl: String,
@@ -109,8 +108,7 @@ class AkakceUIComponent {
                             style = MaterialTheme.typography.subtitle1,
                             fontSize = 10.sp,
                             color = AkakceTheme.colors.akakceBaseBlue,
-                            modifier = Modifier.padding(12.dp, 4.dp),
-                            letterSpacing = TextUnit(0.6f, TextUnitType.Sp)
+                            modifier = Modifier.padding(12.dp, 4.dp)
                         )
                     }
                     Text(
@@ -138,8 +136,7 @@ class AkakceUIComponent {
                             modifier = Modifier.padding(6.dp, 12.dp),
                             color = AkakceTheme.colors.akakceBasePurple,
                             fontSize = 9.sp,
-                            fontWeight = FontWeight.Bold,
-                            letterSpacing = TextUnit(0.3f, TextUnitType.Sp)
+                            fontWeight = FontWeight.Bold
                         )
 
                     }
