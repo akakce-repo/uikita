@@ -34,10 +34,11 @@ class AkakceUIBadge {
                 modifier = Modifier
                     .padding(0.dp, 8.dp)
                     .size(120.dp, 25.dp),
-                onClick = {}
+                onClick = {},
+                enabled = false
             ){}
             Text(
-                text = "BROŞÜRDE EN UCUZ",
+                text = badgeText,
                 modifier = Modifier.padding(6.dp, 15.dp),
                 color = AkakceTheme.colors.akakceBasePurple,
                 fontSize = 9.sp,
