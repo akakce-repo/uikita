@@ -25,8 +25,7 @@ class AkakceUIComponent {
         price: String,
         countPrice: String,
         unitPrice: String,
-        badgeText: String,
-        onClick: Boolean
+        badgeText: String
     ) {
         Box(
             modifier = Modifier
@@ -48,8 +47,6 @@ class AkakceUIComponent {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     AkakceUIBadge().Badge(badgeText)
-                    AkakceUIBell().Bell(onClick)
-
                 }
             }
 
