@@ -58,7 +58,7 @@ class AkakceUIBell {
                 }else{
                     Image(
                         painter = painterResource(
-                            id = R.drawable.ic_follow
+                            id = R.drawable.ic_unfollow
 
                         ),
                         contentDescription = "content description",
