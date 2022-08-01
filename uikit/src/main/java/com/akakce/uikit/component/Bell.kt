@@ -56,10 +56,9 @@ class AkakceUIBell {
                         .padding(11.dp, 11.dp)
                         .size(20.dp)
                 )
-                isClick = clickable.value
-
             }
 
         }
+        isClick = clickable.value
     }
 }
