@@ -20,7 +20,6 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
-    var isClick = false
 
     @Composable
     fun Bell(onClick: Boolean) {
@@ -43,33 +42,24 @@ class AkakceUIBell {
                         .padding(4.dp),
                     onClick = { clickable.value = !clickable.value }
                 ) {}
-                if (clickable.value){
-                    Image(
-                        painter = painterResource(
-                            id = R.drawable.ic_follow
+                Image(
+                    painter = painterResource(
+                        id =
+                        if (clickable.value) {
+                            R.drawable.ic_follow
+                        } else {
+                            R.drawable.ic_unfollow
+                        }
 
-                        ),
-                        contentDescription = "content description",
-                        modifier = Modifier
-                            .padding(11.dp, 11.dp)
-                            .size(20.dp)
-                    )
-                    isClick = true
-                }else{
-                    Image(
-                        painter = painterResource(
-                            id = R.drawable.ic_unfollow
+                    ),
+                    contentDescription = "content description",
+                    modifier = Modifier
+                        .padding(11.dp, 11.dp)
+                        .size(20.dp)
+                )
 
-                        ),
-                        contentDescription = "content description",
-                        modifier = Modifier
-                            .padding(11.dp, 11.dp)
-                            .size(20.dp)
-                    )
-                    isClick = false
-                }
             }
-
         }
+
     }
 }
