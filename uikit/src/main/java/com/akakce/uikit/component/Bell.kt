@@ -20,7 +20,6 @@ import com.akakce.uikit.R
  */
 
 class AkakceUIBell {
-
     @Composable
     fun Bell(onClick: Boolean) {
 
@@ -60,6 +59,5 @@ class AkakceUIBell {
 
             }
         }
-
     }
 }
