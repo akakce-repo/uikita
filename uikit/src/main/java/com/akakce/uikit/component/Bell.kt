@@ -32,13 +32,21 @@ class AkakceUIBell {
 
         Box {
             Box(modifier = Modifier.padding(0.dp, 2.dp)) {
-                Image(
-                    painterResource(id = R.drawable.ic_ellipse),
-                    contentDescription = null,
+                OutlinedButton(
+                    shape = RoundedCornerShape(
+                        20.dp,
+                        20.dp,
+                        20.dp,
+                        20.dp
+                    ),
                     modifier = Modifier
                         .size(41.dp)
                         .padding(4.dp),
-                )
+                    onClick = {
+                        clickable.value = !clickable.value
+                        isClick = clickable.value
+                    }
+                ) {}
                 Image(
                     painter = painterResource(
                         id =
